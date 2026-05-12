@@ -2,6 +2,10 @@ library(gnm)
 library(dlnm)
 library(SALURhelper)
 
+if (!exists("cbt1", inherits = FALSE) || !exists("fit3_1", inherits = FALSE)) {
+  source("03_preliminary_models.R", local = FALSE)
+}
+
 # We pick model 3
 attrdl(
   x = df$temp,
