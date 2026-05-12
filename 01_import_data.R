@@ -52,7 +52,6 @@ df_914222 <- read_parquet("2026_panama_reproducibility/c914222.parquet")
 df_950907 <- read_parquet("2026_panama_reproducibility/c950907.parquet")
 df_970761 <- read_parquet("2026_panama_reproducibility/c970761.parquet")
 df_990688 <- read_parquet("2026_panama_reproducibility/c990688.parquet")
-
 df <- bind_rows(
   df_000274,
   df_005813,
