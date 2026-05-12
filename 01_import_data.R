@@ -9,7 +9,10 @@ files <- list.files(
 )
 
 if (length(files) == 0) {
-  stop("No .parquet files found in '2026_panama_reproducibility'.", call. = FALSE)
+  stop(
+    "No .parquet files found in '2026_panama_reproducibility'.",
+    call. = FALSE
+  )
 }
 
 df <- map_dfr(files, read_parquet)
