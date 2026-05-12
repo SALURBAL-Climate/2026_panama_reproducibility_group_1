@@ -4,7 +4,7 @@ library(arrow)
 # READ FILES
 files <- list.files(
   "2026_panama_reproducibility",
-  pattern = "*.parquet",
+  pattern = "\\.parquet$",
   full.names = TRUE
 )
 df <- map_dfr(files, read_parquet)
