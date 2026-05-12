@@ -2,7 +2,13 @@ library(gnm)
 library(dlnm)
 library(SALURhelper)
 
+if (!exists("df", inherits = FALSE)) {
+  source("01_import_data.R", local = FALSE)
+}
+
 # Model 1
+
+
 n_lag <- 5
 cbt1 <- crossbasis(
   x = df$temp,
