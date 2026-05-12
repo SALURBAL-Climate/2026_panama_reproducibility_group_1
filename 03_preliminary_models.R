@@ -3,11 +3,12 @@ library(dlnm)
 library(SALURhelper)
 
 # Model 1
+n_lag <- 5
 cbt1 <- crossbasis(
   x = df$temp,
-  lag = 5,
+  lag = n_lag,
   argvar = list(fun = "ns", knots = quantile(df$temp, c(.5, .9))),
-  arglag = list(fun = "ns", knots = logknots(5, 2)),
+  arglag = list(fun = "ns", knots = logknots(n_lag, 2)),
   group = as.character(df$sim_id)
 )
 
